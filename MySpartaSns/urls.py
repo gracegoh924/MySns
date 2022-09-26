@@ -19,6 +19,6 @@ from . import views # 현재 폴더에서 views.py 파일을 가져오겠다.
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', views.base_response, name='first_test'),
+    path('test/', views.base_response, name='first_test'), # 마지막 콤마까지.
     path('first/', views.first_view, name='first_view'),
 ]
