@@ -3,7 +3,7 @@ from django.shortcuts import render # render: html 보여주는 역할
 
 
 def base_response(request):
-    return HttpResponse("안녕하세요! 대랑이 여자칭구입니다!")
+    return HttpResponse("안녕하세요! grace입니다!")
 
 def first_view(request): # first_view() 함수는 'my_test.html' 보여주는 역할
     return render(request, 'my_test.html')
