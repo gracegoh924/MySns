@@ -1,5 +1,8 @@
 <!-- templates/tweet/home.html -->
 {% extends 'base.html' %}
+{% block title %}
+    메인페이지
+{% endblock %}
 
 {% block content %}
     <div class="container timeline-container">
@@ -56,7 +59,7 @@
                                         </div>
                                     {% endif %}
                                     <div style="text-align: right">
-                                        <a href="#">
+                                        <a href="/tweet/{{ tw.id }}">
                                             <span class="badge rounded-pill bg-success">보기</span>
                                         </a>
                                     </div>
