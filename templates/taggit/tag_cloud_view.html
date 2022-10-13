@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}태그 클라우드{% endblock %}
+
+
+{% block content %}
+
+    <div class="container timeline-container">
+        <div class="tag-cloud">
+            {% load taggit_templatetags2_tags %}
+            {% get_tagcloud as tags %} <!--모든 태그 추출해서 tags변수에 할당-->
+            {% for tag in tags %}
+                    <a style="text-decoration: none" href="{% url 'tagged_object_list' tag.name %}">
+                        <span class="badge rounded-pill bg-primary">
+                            {{ tag.name }}({{ tag.num_times }})
+                        </span>
+                    </a>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
